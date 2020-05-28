@@ -2,7 +2,7 @@
    Wrapper for afl-like fuzzers with statical instrumentation and forced timeout jo fuzzed target aborting.
 
 Notes:
-==============
+============== 
 ```
 Installing jsoncpp on Ubuntu
 Ubuntu 16.04:
