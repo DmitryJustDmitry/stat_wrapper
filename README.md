@@ -1,3 +1,6 @@
+# stat_wrapper
+Wrapper for afl-like fuzzers with statical instrumentation and forced timeout jo fuzzed target aborting.
+
 
 Notes:
 ==============
@@ -43,3 +46,7 @@ server-ip     :10.10.10.20
 server-port   :5555
 buffer-length :5000
 ```
+
+
+
+
