@@ -1,6 +1,6 @@
 PROG = stat_wrapper
 JSONCPPPATH = /usr/include/jsoncpp
-  
+  fffffff
 ifndef ISP_PATH
   $(error Set ISP_PATH to fuzzer bins first)
 endif
