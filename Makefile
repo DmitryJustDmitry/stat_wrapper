@@ -5,9 +5,9 @@ ifndef ISP_PATH
   $(error Set ISP_PATH to fuzzer bins first)
 endif
 
-ifeq "$(findstring isp-, $(CXX))" ""   
-  $(error Set CXX to the one of the isp-* c++ compilers first)
-endif
+#ifeq "$(findstring isp-, $(CXX))" ""   
+#  $(error Set CXX to the one of the isp-* c++ compilers first)
+#endif
 
 ifeq "$(shell test -e $(JSONCPPPATH) || echo 1)" "1"   
   $(error You must install libjsoncpp-dev)
@@ -25,11 +25,12 @@ LDFLAGS += -L/usr/local/lib $(LDLIBS)
 
 all: $(PROG)
 	@echo $(PROG) compilation success!
-
+	@echo RRRRRRRRR $(CXX)
 SRCS = ReadJsonCfg.cpp
 OBJS=$(subst .cc,.o, $(subst .cpp,.o, $(SRCS)))
 
 $(PROG): $(OBJS)
+	@echo RRRRRRRRRRRRRRRRRR $(CXX)
 	$(CXX) $^ $(LDFLAGS) -o $@
 
 clean:

@@ -1,0 +1,6 @@
+*.o
+stat_wrapper
+*.html*
+*profraw*
+*profdata*
+.vscode*
