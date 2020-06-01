@@ -25,11 +25,12 @@ LDFLAGS += -L/usr/local/lib $(LDLIBS)
 
 all: $(PROG)
 	@echo $(PROG) compilation success!
-	
+	@echo RRRRRRRRR $(CXX)
 SRCS = ReadJsonCfg.cpp
 OBJS=$(subst .cc,.o, $(subst .cpp,.o, $(SRCS)))
 
-$(PROG): $(OBJS)	
+$(PROG): $(OBJS)
+	@echo RRRRRRRRRRRRRRRRRR $(CXX)
 	$(CXX) $^ $(LDFLAGS) -o $@
 
 clean:
