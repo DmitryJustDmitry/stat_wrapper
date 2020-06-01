@@ -1,6 +1,6 @@
 PROG = stat_wrapper
 JSONCPPPATH = /usr/include/jsoncpp
-  fffffff
+
 ifndef ISP_PATH
   $(error Set ISP_PATH to fuzzer bins first)
 endif
@@ -25,12 +25,11 @@ LDFLAGS += -L/usr/local/lib $(LDLIBS)
 
 all: $(PROG)
 	@echo $(PROG) compilation success!
-	@echo RRRRRRRRR $(CXX)
+	
 SRCS = ReadJsonCfg.cpp
 OBJS=$(subst .cc,.o, $(subst .cpp,.o, $(SRCS)))
 
-$(PROG): $(OBJS)
-	@echo RRRRRRRRRRRRRRRRRR $(CXX)
+$(PROG): $(OBJS)	
 	$(CXX) $^ $(LDFLAGS) -o $@
 
 clean:
