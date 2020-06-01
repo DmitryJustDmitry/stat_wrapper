@@ -1,11 +1,3 @@
-//
-// ReadJsonCfg.cpp
-//
-// Created by Sandesh Kumar Sodhi, January 2018
-// Copyright (c) 2018 Sandesh Kumar Sodhi
-//
-// Notice and Disclaimer: This code is licensed to you under the MIT license.
-//
 
 #include <iostream>
 #include <jsoncpp/json/value.h>
@@ -32,6 +24,7 @@ main()
 void 
 displayCfg(const Json::Value &cfg_root)
 {
+    
     std::string serverIP = cfg_root["Config"]["server-ip"].asString();
     std::string serverPort = cfg_root["Config"]["server-port"].asString();
     unsigned int bufferLen = cfg_root["Config"]["buffer-length"].asUInt();
